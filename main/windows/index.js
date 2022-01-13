@@ -99,6 +99,7 @@ const api = {
       icon: path.join(__dirname, './AppIcon.png'),
       skipTaskbar: process.platform !== 'linux',
       webPreferences: {
+        allowRunningInsecureContent: true,
         nodeIntegration: false,
         contextIsolation: true,
         sandbox: true,

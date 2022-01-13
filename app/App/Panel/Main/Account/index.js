@@ -17,6 +17,7 @@ import SignerModule from './Signer'
 import SignerStatus from './SignerStatus'
 import Verify from './Verify'
 import Settings from './Settings'
+import Plaid from "./Plaid"
 
 
 // import Settings from './Settings'
@@ -228,6 +229,12 @@ class _AccountMain extends React.Component {
               minimized={this.props.minimized} 
               status={this.props.status} 
               signer={this.props.signer} 
+              expandModule={expandModule}
+              expanded={expanded}
+            /> :
+            id === 'plaid' ? <Plaid 
+              moduleId={id}
+              id={this.props.id}
               expandModule={expandModule}
               expanded={expanded}
             /> :

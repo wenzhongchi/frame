@@ -125,6 +125,7 @@ const surface = {
       icon: path.join(__dirname, './AppIcon.png'),
       // skipTaskbar: process.platform !== 'linux',
       webPreferences: {
+        allowRunningInsecureContent: true,
         webviewTag: false,
         nodeIntegration: false,
         contextIsolation: true,
@@ -164,6 +165,7 @@ const surface = {
     const loadApp = hidden => {
       const view = new BrowserView({
         webPreferences: {
+          allowRunningInsecureContent: true,
           contextIsolation: true,
           webviewTag: false,
           sandbox: true,
